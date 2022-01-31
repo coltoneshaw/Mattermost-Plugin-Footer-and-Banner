@@ -13,10 +13,14 @@
       "experimentalObjectRestSpread": true
     }
   },
-  "parser": "babel-eslint",
+  "parser": "@typescript-eslint/parser",
   "plugins": [
     "react",
-    "import"
+    "import",
+    "babel",
+    "cypress",
+    "no-only-tests",
+    "@typescript-eslint"
   ],
   "env": {
     "browser": true,
@@ -35,7 +39,10 @@
     "beforeEach": true
   },
   "settings": {
-    "import/resolver": "webpack"
+    "import/resolver": "webpack",
+    "react": {
+      "version": "16.14.0"
+    }
   },
   "rules": {
     "array-bracket-spacing": [

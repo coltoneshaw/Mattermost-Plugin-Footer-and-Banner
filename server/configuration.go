@@ -4,6 +4,8 @@ import (
 	"reflect"
 
 	"github.com/pkg/errors"
+
+	"github.com/mattermost/mattermost-server/v6/model"
 )
 
 // configuration captures the plugin's external configuration as exposed in the Mattermost server
@@ -18,6 +20,9 @@ import (
 // If you add non-reference types to your configuration struct, be sure to rewrite Clone as a deep
 // copy appropriate for your types.
 type configuration struct {
+	BannerColor     string
+	BannerText      string
+	BannerTextColor string
 }
 
 // Clone shallow copies the configuration. Your implementation may require a deep copy if
@@ -70,14 +75,39 @@ func (p *Plugin) setConfiguration(configuration *configuration) {
 
 // OnConfigurationChange is invoked when configuration changes may have been made.
 func (p *Plugin) OnConfigurationChange() error {
-	var configuration = new(configuration)
+	oldConfig := p.getConfiguration()
+	newConfig := new(configuration)
 
 	// Load the public configuration fields from the Mattermost server configuration.
-	if err := p.API.LoadPluginConfiguration(configuration); err != nil {
+	if err := p.API.LoadPluginConfiguration(newConfig); err != nil {
 		return errors.Wrap(err, "failed to load plugin configuration")
 	}
 
-	p.setConfiguration(configuration)
+	p.setConfiguration(newConfig)
+
+	if oldConfig.BannerColor != newConfig.BannerColor {
+		// in case we want to include the config values in the websocket message itself
+		payload := map[string]interface{}{
+			"BannerColor": newConfig.BannerColor,
+		}
+		p.API.PublishWebSocketEvent("setting_changed", payload, &model.WebsocketBroadcast{})
+	}
+
+	if oldConfig.BannerText != newConfig.BannerText {
+		// in case we want to include the config values in the websocket message itself
+		payload := map[string]interface{}{
+			"BannerText": newConfig.BannerText,
+		}
+		p.API.PublishWebSocketEvent("setting_changed", payload, &model.WebsocketBroadcast{})
+	}
+
+	if oldConfig.BannerTextColor != newConfig.BannerTextColor {
+		// in case we want to include the config values in the websocket message itself
+		payload := map[string]interface{}{
+			"BannerTextColor": newConfig.BannerTextColor,
+		}
+		p.API.PublishWebSocketEvent("setting_changed", payload, &model.WebsocketBroadcast{})
+	}
 
 	return nil
 }

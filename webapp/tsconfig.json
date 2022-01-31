@@ -1,6 +1,11 @@
 {
   "compilerOptions": {
     "target": "esnext",
+    // "paths": {
+    //   "mdux/*": [
+    //     "node_modules/mattermost-webapp/packages/mattermost-redux/src/*"
+    //   ]
+    // },
     "lib": [
       "dom",
       "dom.iterable",
