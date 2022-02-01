@@ -35,13 +35,14 @@
             "key": "BannerText",
             "display_name": "Banner Text:",
             "type": "text",
-            "help_text": "Text for the secondary banner",
+            "help_text": "Text for the secondary banner. Use markdown to add additional formatting.",
             "placeholder": "Text",
             "default": null
         },
         {
             "key": "BannerColor",
             "display_name": "Banner Color:",
+            "help_text": "These should be hex or word values for a color. If using text format like '#000000'",
             "type": "text",
             "placeholder": "#000000",
             "default": "#579eff"
@@ -49,6 +50,7 @@
         {
             "key": "BannerTextColor",
             "display_name": "Banner Text Color:",
+            "help_text": "These should be hex or word values for a color. If using text format like '#000000'",
             "type": "text",
             "placeholder": "#000000",
             "default": "#fff"
@@ -65,7 +67,7 @@
             "key": "FooterText",
             "display_name": "Footer Text:",
             "type": "text",
-            "help_text": "Text for the footer",
+            "help_text": "Text for the secondary banner. Use markdown to add additional formatting.",
             "placeholder": "Text",
             "default": null
         },
@@ -73,12 +75,14 @@
             "key": "Footercolor",
             "display_name": "Footer Color:",
             "type": "text",
+            "help_text": "These should be hex or word values for a color. If using text format like '#000000'",
             "placeholder": "#000000",
             "default": "#579eff"
         },
         {
             "key": "FooterTextColor",
             "display_name": "Footer Text Color:",
+            "help_text": "These should be hex or word values for a color. If using text format like '#000000'",
             "type": "text",
             "placeholder": "#000000",
             "default": "#fff"

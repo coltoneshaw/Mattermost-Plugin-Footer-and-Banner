@@ -1,5 +1,6 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import './footer.scss';
+import ReactMarkdown from 'react-markdown';
 
 import {useAppSelector} from '@/pluginStore/hooks';
 
@@ -18,7 +19,9 @@ const Footer = () => {
             }}
         >
             <div className='footer-bar-text'>
-                {FooterText}
+                <ReactMarkdown>
+                    {FooterText}
+                </ReactMarkdown>
             </div>
 
         </div>

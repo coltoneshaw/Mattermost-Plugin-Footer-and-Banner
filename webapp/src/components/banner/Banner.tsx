@@ -1,5 +1,6 @@
 import React from 'react';
 import './banner.scss';
+import ReactMarkdown from 'react-markdown';
 
 import {useAppSelector} from '@/pluginStore/hooks';
 
@@ -18,7 +19,9 @@ const Banner = () => {
             }}
         >
             <div className='extra-announcement-bar__text'>
-                {BannerText}
+                <ReactMarkdown>
+                    {BannerText}
+                </ReactMarkdown>
             </div>
 
         </div>

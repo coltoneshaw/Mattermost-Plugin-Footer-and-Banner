@@ -7,7 +7,7 @@ import pluginStore from '@/pluginStore/store';
 
 import Banner from '@/components/banner/Banner';
 
-import Footer from '@/components/footer/footer';
+import Footer from '@/components/footer/Footer';
 const PluginRoot = () => {
     return (
         <React.StrictMode>
