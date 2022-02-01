@@ -4,12 +4,11 @@ This plugin very simply allows you to add an additional banner and a Footer to M
 
 ## Installation
 
-You can download the latest release from [here]() and upload it to your server via System Console > Plugin Management. You must first have `EnableUploads` set to true within your `config.json`.
+You can download the latest release from [here](https://github.com/coltoneshaw/Mattermost-Plugin-Footer-and-Banner/releases) under Assets. Once you do this then upload it to your server via System Console > Plugin Management. You must first have `EnableUploads` set to true within your `config.json`.
 
 ```json
 "PluginSettings": {
     "EnableUploads": false
-    ...
 }
 ```
 
