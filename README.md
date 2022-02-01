@@ -28,4 +28,8 @@ The text can be formatted with markdown.
 
 ex: `**Make sure** to follow the compliance [here](www.thecompliance.com)`
 
+## Example
+
+![Screen Shot 2022-02-01 at 2 33 35 PM](https://user-images.githubusercontent.com/46071821/152039400-905f0db4-7abc-4426-aae8-4add3c08b869.png)
+
 
