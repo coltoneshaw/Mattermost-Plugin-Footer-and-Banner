@@ -12,8 +12,6 @@
     max-height: 40px;
     align-items: center;
     justify-content: center;
-    background-color: #579eff;
-    color: #fff;
     text-align: center;
 
     .extra-announcement-bar__text {
@@ -66,70 +64,5 @@
         }
     }
 
-    .fa-wrapper {
-        margin: 0 5px;
-    }
 
-    .resend-verification-wrapper::before {
-        content: "\00a0 ";
-    }
-
-    .content__icon,
-    i {
-        margin-right: 4px;
-        color: #fff;
-        font-family: 'compass-icons';
-        font-size: 16px;
-    }
-
-    button {
-        &:hover {
-            background-color: rgba(255, 255, 255, 0.08);
-        }
-
-        height: 24px;
-        box-sizing: border-box;
-        padding: 4px 8px;
-        border: 1px solid #fff;
-        margin-left: 8px;
-        background-color: inherit !important;
-        border-radius: 4px;
-        font-family: Open Sans;
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 16px;
-    }
-}
-
-.announcement-bar-critical {
-    background-color: #f74343;
-}
-
-.announcement-bar-success {
-    background-color: #06d6a0;
-}
-
-.announcement-bar-advisor {
-    background-color: #579eff;
-}
-
-.announcement-bar-advisor-ack {
-    background-color: #06d6a0;
-}
-
-.announcement-bar-general {
-    background-color: #3d3c40;
-}
-
-.announcement-bar__link {
-    margin-left: 4px;
-}
-
-.advisor-icon {
-    width: 16px;
-    height: 16px;
-    margin-right: 8px;
-    margin-bottom: 2px;
-    margin-left: 8px;
 }

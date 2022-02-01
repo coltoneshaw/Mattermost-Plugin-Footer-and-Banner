@@ -6,6 +6,10 @@
     //     "node_modules/mattermost-webapp/packages/mattermost-redux/src/*"
     //   ]
     // },
+    "paths": {
+      "@/*": ["./*"],
+      "mattermost-redux/*": ["../node_modules/mattermost-webapp/packages/mattermost-redux/src/*"],
+    },
     "lib": [
       "dom",
       "dom.iterable",
@@ -29,7 +33,7 @@
     "typeRoots": [ "./src/types", "./node_modules/@types"],
   },
   "include": [
-    "src"
+    "./**/*"
   ],
   "exclude": [
     "dist",

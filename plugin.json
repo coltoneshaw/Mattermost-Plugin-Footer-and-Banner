@@ -34,16 +34,16 @@
         {
             "key": "BannerColor",
             "display_name": "Banner Color:",
-            "type": "picker",
+            "type": "text",
             "placeholder": "#000000",
-            "default": null
+            "default": "#579eff"
         },
         {
             "key": "BannerTextColor",
             "display_name": "Banner Text Color:",
             "type": "text",
             "placeholder": "#000000",
-            "default": null
+            "default": "#fff"
         }
     ]
     }
