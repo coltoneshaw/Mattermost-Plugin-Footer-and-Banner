@@ -2,6 +2,8 @@
 
 This plugin very simply allows you to add an additional banner and a Footer to Mattermost. These are configured similar to the current `Announcement Banner` that exists within Mattermost.
 
+**Currently this does not have support on the mobile client**
+
 ## Installation
 
 You can download the latest release from [here](https://github.com/coltoneshaw/Mattermost-Plugin-Footer-and-Banner/releases) under Assets. Once you do this then upload it to your server via System Console > Plugin Management. You must first have `EnableUploads` set to true within your `config.json`.
