@@ -10,7 +10,7 @@ You can download the latest release from [here](https://github.com/coltoneshaw/M
 
 ```json
 "PluginSettings": {
-    "EnableUploads": false
+    "EnableUploads": true
 }
 ```
 
