@@ -24,6 +24,14 @@
         "header": "",
         "footer": "",
         "settings": [{
+            "key": "EnableBanner",
+            "display_name": "Enable Banner:",
+            "type": "bool",
+            "help_text": "Enable or disable the global header",
+            "placeholder": "",
+            "default": true
+        },
+        {
             "key": "BannerText",
             "display_name": "Banner Text:",
             "type": "text",
@@ -41,6 +49,36 @@
         {
             "key": "BannerTextColor",
             "display_name": "Banner Text Color:",
+            "type": "text",
+            "placeholder": "#000000",
+            "default": "#fff"
+        },
+        {
+            "key": "EnableFooter",
+            "display_name": "Enable Footer:",
+            "type": "bool",
+            "help_text": "Enable or disable the global footer",
+            "placeholder": "",
+            "default": true
+        },
+        {
+            "key": "FooterText",
+            "display_name": "Footer Text:",
+            "type": "text",
+            "help_text": "Text for the footer",
+            "placeholder": "Text",
+            "default": null
+        },
+        {
+            "key": "Footercolor",
+            "display_name": "Footer Color:",
+            "type": "text",
+            "placeholder": "#000000",
+            "default": "#579eff"
+        },
+        {
+            "key": "FooterTextColor",
+            "display_name": "Footer Text Color:",
             "type": "text",
             "placeholder": "#000000",
             "default": "#fff"

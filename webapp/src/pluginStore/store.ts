@@ -1,10 +1,12 @@
 import {configureStore} from '@reduxjs/toolkit';
 
-import bannerSlice from './bannerSlice';
+import bannerSlice from '@/components/banner/bannerReduxSlice';
+import footerSlice from '@/components/footer/footerReduxSlice';
 
 const store = configureStore({
     reducer: {
         banner: bannerSlice,
+        footer: footerSlice,
     },
     devTools: true,
 });

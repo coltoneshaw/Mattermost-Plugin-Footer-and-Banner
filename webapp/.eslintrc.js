@@ -115,7 +115,7 @@ const config = {
         'constructor-super': 2,
         curly: [
             2,
-            'all',
+            'multi',
         ],
         'dot-location': [
             2,

@@ -1,5 +1,7 @@
+import {setBannerConfig} from '@/components/banner/bannerReduxSlice';
+import {setFooterConfig} from '@/components/footer/footerReduxSlice';
+
 import store from './store';
-import {setConfig} from './bannerSlice';
 
 const pluginStore = store;
-export {pluginStore, setConfig};
+export {pluginStore, setBannerConfig, setFooterConfig};

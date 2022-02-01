@@ -23,6 +23,11 @@ type configuration struct {
 	BannerColor     string
 	BannerText      string
 	BannerTextColor string
+	FooterColor     string
+	FooterText      string
+	FooterTextColor string
+	EnableFooter    bool
+	EnableBanner    bool
 }
 
 // Clone shallow copies the configuration. Your implementation may require a deep copy if
@@ -105,6 +110,46 @@ func (p *Plugin) OnConfigurationChange() error {
 		// in case we want to include the config values in the websocket message itself
 		payload := map[string]interface{}{
 			"BannerTextColor": newConfig.BannerTextColor,
+		}
+		p.API.PublishWebSocketEvent("setting_changed", payload, &model.WebsocketBroadcast{})
+	}
+
+	if oldConfig.FooterColor != newConfig.FooterColor {
+		// in case we want to include the config values in the websocket message itself
+		payload := map[string]interface{}{
+			"FooterColor": newConfig.FooterColor,
+		}
+		p.API.PublishWebSocketEvent("setting_changed", payload, &model.WebsocketBroadcast{})
+	}
+
+	if oldConfig.FooterText != newConfig.FooterText {
+		// in case we want to include the config values in the websocket message itself
+		payload := map[string]interface{}{
+			"FooterText": newConfig.FooterText,
+		}
+		p.API.PublishWebSocketEvent("setting_changed", payload, &model.WebsocketBroadcast{})
+	}
+
+	if oldConfig.FooterTextColor != newConfig.FooterTextColor {
+		// in case we want to include the config values in the websocket message itself
+		payload := map[string]interface{}{
+			"FooterTextColor": newConfig.FooterTextColor,
+		}
+		p.API.PublishWebSocketEvent("setting_changed", payload, &model.WebsocketBroadcast{})
+	}
+
+	if oldConfig.EnableBanner != newConfig.EnableBanner {
+		// in case we want to include the config values in the websocket message itself
+		payload := map[string]interface{}{
+			"EnableBanner": newConfig.EnableBanner,
+		}
+		p.API.PublishWebSocketEvent("setting_changed", payload, &model.WebsocketBroadcast{})
+	}
+
+	if oldConfig.EnableFooter != newConfig.EnableFooter {
+		// in case we want to include the config values in the websocket message itself
+		payload := map[string]interface{}{
+			"EnableFooter": newConfig.EnableFooter,
 		}
 		p.API.PublishWebSocketEvent("setting_changed", payload, &model.WebsocketBroadcast{})
 	}
