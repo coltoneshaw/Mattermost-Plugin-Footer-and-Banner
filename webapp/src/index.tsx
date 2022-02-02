@@ -4,7 +4,7 @@ import {GlobalState} from 'mattermost-redux/types/store';
 
 import {setBannerConfig, setFooterConfig, pluginStore} from '@/pluginStore';
 
-import PluginRoot from '@/plugin';
+import PluginRoot from '@/pluginRoot';
 
 import manifest from '@/manifest';
 

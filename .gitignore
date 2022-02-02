@@ -10,3 +10,5 @@ dist/
 .idea/
 
 .env
+vagrant
+new.env
