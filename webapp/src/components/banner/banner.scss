@@ -13,6 +13,9 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
 
     .extra-announcement-bar__text {
         display: flex;

@@ -5,7 +5,7 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/mattermost/mattermost-server/v6/model"
+	"github.com/mattermost/mattermost-server/v5/model"
 )
 
 // configuration captures the plugin's external configuration as exposed in the Mattermost server

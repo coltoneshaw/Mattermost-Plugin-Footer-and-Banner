@@ -41,7 +41,7 @@ export default class Plugin {
             dispatchPluginStore(setBannerConfig, {BannerColor, BannerText, BannerTextColor, EnableBanner});
         });
 
-        registry.registerGlobalComponent(PluginRoot);
+        registry.registerRootComponent(PluginRoot);
     }
 }
 

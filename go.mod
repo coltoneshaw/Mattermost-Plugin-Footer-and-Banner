@@ -1,10 +1,10 @@
 module github.com/coltoneshaw/Mattermost-Plugin-Additional-Banner
 
-go 1.17
+go 1.16
 
 require (
 	github.com/mattermost/mattermost-plugin-calls v0.3.0
-	github.com/mattermost/mattermost-server/v6 v6.2.1
+	github.com/mattermost/mattermost-server/v5 v5.39.3
 	github.com/pion/ice/v2 v2.1.20
 	github.com/pion/rtcp v1.2.9
 	github.com/pion/stun v0.3.5
